@@ -184,62 +184,195 @@ button:hover {
 }
 
 /* CAKE */
-
 .cake {
-    width: 250px;
-    height: 110px;
-    margin: 75px auto 35px;
-    background: #1e293b;
-    border: 2px solid #38bdf8;
-    border-radius: 15px;
+    width: 270px;
+    height: 150px;
+    margin: 95px auto 35px;
     position: relative;
+    animation: cakeFloat 3s ease-in-out infinite;
+    filter: drop-shadow(0 0 25px rgba(56,189,248,0.25));
 }
+
+/* TOP FROSTING */
 
 .cake-top {
     position: absolute;
-    top: 0;
-    width: 100%;
-    height: 35px;
-    background: #334155;
-    border-radius: 13px 13px 8px 8px;
+    top: 45px;
+    left: 10px;
+    width: 250px;
+    height: 45px;
+    background: linear-gradient(
+        135deg,
+        #e0e7ff,
+        #c4b5fd
+    );
+    border-radius: 18px 18px 12px 12px;
+    box-shadow:
+        inset 0 -8px 0 rgba(139,92,246,0.25),
+        0 0 18px rgba(167,139,250,0.2);
+    z-index: 4;
 }
+
+/* NUMBER ON CAKE */
+
+.cake-top span {
+    display: block;
+    text-align: center;
+    padding-top: 8px;
+    font-size: 25px;
+    font-weight: bold;
+    color: #312e81;
+}
+
+/* FROSTING DRIPS */
+
+.frosting {
+    position: absolute;
+    top: 75px;
+    left: 18px;
+    width: 234px;
+    height: 28px;
+    background: #c4b5fd;
+    border-radius: 0 0 18px 18px;
+    z-index: 5;
+}
+
+.frosting::before,
+.frosting::after {
+    content: "";
+    position: absolute;
+    bottom: -13px;
+    width: 25px;
+    height: 25px;
+    background: #c4b5fd;
+    border-radius: 0 0 15px 15px;
+}
+
+.frosting::before {
+    left: 45px;
+}
+
+.frosting::after {
+    right: 50px;
+}
+
+/* MIDDLE CAKE LAYER */
+
+.cake-middle {
+    position: absolute;
+    top: 88px;
+    left: 18px;
+    width: 234px;
+    height: 40px;
+    background: linear-gradient(
+        #475569,
+        #334155
+    );
+    border-radius: 8px 8px 12px 12px;
+    z-index: 2;
+}
+
+/* BOTTOM CAKE LAYER */
+
+.cake-bottom {
+    position: absolute;
+    top: 115px;
+    left: 5px;
+    width: 260px;
+    height: 35px;
+    background: linear-gradient(
+        #334155,
+        #1e293b
+    );
+    border-radius: 8px 8px 15px 15px;
+    border: 1px solid #38bdf8;
+    z-index: 1;
+}
+
+/* CANDLES */
 
 .candles {
     position: absolute;
-    top: -70px;
+    top: -25px;
+    left: 0;
     width: 100%;
     display: flex;
     justify-content: center;
-    gap: 25px;
+    gap: 30px;
+    z-index: 10;
 }
 
 .candle {
-    width: 38px;
+    width: 18px;
     height: 65px;
-    background: linear-gradient(#38bdf8, #8b5cf6);
-    border-radius: 6px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
     position: relative;
+    border-radius: 5px;
+    background:
+        repeating-linear-gradient(
+            135deg,
+            #38bdf8 0px,
+            #38bdf8 6px,
+            #8b5cf6 6px,
+            #8b5cf6 12px
+        );
+    box-shadow:
+        0 0 8px rgba(56,189,248,0.3);
 }
+
+/* FLAMES */
 
 .flame {
     position: absolute;
-    top: -27px;
-    width: 17px;
-    height: 25px;
+    top: -28px;
+    left: 2px;
+    width: 14px;
+    height: 23px;
     background: #facc15;
     border-radius: 50% 50% 50% 0;
     transform: rotate(-45deg);
-    box-shadow: 0 0 18px #facc15;
+    box-shadow:
+        0 0 8px #facc15,
+        0 0 18px rgba(250,204,21,0.7);
+    animation: flicker 0.7s ease-in-out infinite alternate;
 }
+
+/* FLAME ANIMATION */
+
+@keyframes flicker {
+
+    from {
+        transform: rotate(-45deg) scale(1);
+    }
+
+    to {
+        transform: rotate(-42deg) scale(1.12);
+    }
+
+}
+
+/* CAKE FLOATING */
+
+@keyframes cakeFloat {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-7px);
+    }
+
+}
+
+/* WHEN CANDLE IS BLOWN OUT */
 
 .flame.off {
     opacity: 0;
     transform: rotate(-45deg) scale(0);
-}
+    animation: none;
+    transition: 0.4s;
+    }
+    
 
 #countdown {
     min-height: 45px;
