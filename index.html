@@ -510,13 +510,23 @@ button:hover {
 
 .photo {
     aspect-ratio: 1;
-    border: 1px dashed #38bdf8;
+    border: 1px solid #38bdf8;
     border-radius: 16px;
     background: #0f172a;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #64748b;
+    overflow: hidden;
+    box-shadow: 0 0 18px rgba(56,189,248,0.12);
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: 0.35s ease;
+}
+
+.photo:hover img {
+    transform: scale(1.05);
 }
 
 /* TIMELINE */
@@ -705,30 +715,30 @@ button:hover {
     <div class="content">
 
         <h2>
-            A small letter.
+            A small letter for you turtula, 
         </h2>
 
         <div class="letter">
 
             <p>
                 I didn't want to make this just another
-                birthday message.
+                birthday message.. or something way too dull
             </p>
 
             <p>
                 So here's a tiny corner of the internet
-                that exists just for today.
+                that exists just for today just for youu
             </p>
 
             <p>
                 I hope this year brings you good moments,
                 unexpected laughs, peaceful days and
-                memories you'll want to keep.
+                memories you'll want to keep for ever
             </p>
 
             <p>
                 And most importantly, I hope you enjoy
-                your day properly.
+                your day properly cause it's mandatory
             </p>
 
             <div class="signature">
@@ -815,30 +825,33 @@ button:hover {
         </div>
 
         <h2>
-            A few memories.
+            A few memories... 
         </h2>
 
         <p>
-            These spaces will become your photo collection.
+            You better appreciate my collection (btw these are just my fav one's) 
+            these are the evidence that you actually survived years after years.. & now u upgraded into two to four eyes
         </p>
 
         <div class="photo-grid">
 
-            <div class="photo">
-                PHOTO 01
-            </div>
+    <div class="photo">
+        <img src="photo1.jpg" alt="Memory 1">
+    </div>
 
-            <div class="photo">
-                PHOTO 02
-            </div>
+    <div class="photo">
+        <img src="photo2.jpg" alt="Memory 2">
+    </div>
 
-            <div class="photo">
-                PHOTO 03
-            </div>
+    <div class="photo">
+        <img src="photo3.jpg" alt="Memory 3">
+    </div>
 
-            <div class="photo">
-                PHOTO 04
-            </div>
+    <div class="photo">
+        <img src="photo4.jpg" alt="Memory 4">
+    </div>
+
+        </div>
 
         </div>
 
@@ -867,52 +880,28 @@ button:hover {
 
         <div class="timeline">
 
-            <div class="timeline-item">
+    <div class="timeline-item">
+        <div class="timeline-time">Morning</div>
+        Your birthday has officially started. Try to behave.. cause I'm watching you pig
+    </div>
 
-                <div class="timeline-time">
-                    Morning
-                </div>
+    <div class="timeline-item">
+        <div class="timeline-time">Afternoon</div>
+        Eat something tasty. . This is an important birthday responsibility
+    </div>
 
-                Wake up and remember that today is
-                officially your day.
+    <div class="timeline-item">
+        <div class="timeline-time">Evening</div>
+        No excuses, you will click some good pictures of you today
+    </div>
 
-            </div>
+    <div class="timeline-item">
+        <div class="timeline-time">Night</div>
+        Congratulations! You made it through another year of being you.. 
+    </div>
 
+        </div>
 
-            <div class="timeline-item">
-
-                <div class="timeline-time">
-                    Afternoon
-                </div>
-
-                Eat something good.
-                Birthday rules.
-
-            </div>
-
-
-            <div class="timeline-item">
-
-                <div class="timeline-time">
-                    Evening
-                </div>
-
-                Birthday mode:
-                fully activated.
-
-            </div>
-
-
-            <div class="timeline-item">
-
-                <div class="timeline-time">
-                    Night
-                </div>
-
-                Finish the day with a memory
-                worth keeping.
-
-            </div>
 
         </div>
 
@@ -936,7 +925,7 @@ button:hover {
         </div>
 
         <h1 class="glow">
-            Happy Birthday.
+            Happy Birthday.. 
         </h1>
 
         <p>
@@ -954,6 +943,7 @@ button:hover {
 
         <div class="final-mark">
             ✦ END ✦
+            Byee byeee! 
         </div>
 
     </div>
