@@ -1061,16 +1061,6 @@ button:hover {
           <div class="candle-stick"></div>
         </div>
 
-        <div class="candle">
-          <div class="flame"></div>
-          <div class="candle-stick"></div>
-        </div>
-
-        <div class="candle">
-          <div class="flame"></div>
-          <div class="candle-stick"></div>
-        </div>
-
       </div>
 
 
@@ -1104,6 +1094,19 @@ button:hover {
 
 
     <!-- BLOW OUT BUTTON -->
+      #blowButton {
+  display: inline-block !important;
+  margin: 15px auto 0;
+}
+
+#cakeNext {
+  display: none !important;
+  margin: 12px auto 0;
+}
+
+#cakeNext.show {
+  display: inline-block !important;
+}
     <button id="blowButton" onclick="blowCandles()">
       Blow Out the Candles
     </button>
@@ -1125,6 +1128,20 @@ button:hover {
 
 
 <style>
+    <script>
+function blowCandles() {
+
+  document.querySelectorAll("#page5 .flame").forEach(function(flame) {
+    flame.classList.add("off");
+  });
+
+  document.getElementById("countdown").innerText = "Wish made.";
+
+  document.getElementById("blowButton").style.display = "none";
+
+  document.getElementById("cakeNext").classList.add("show");
+}
+</script>
 
 /* =========================
    CAKE PAGE
