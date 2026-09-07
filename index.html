@@ -1028,262 +1028,13 @@ button:hover {
 </section>
 
 
-<!-- PAGE 5 : CAKE -->
-<section class="screen" id="page5">
 
-  <div class="content cake-page">
 
-    <p class="small-title">one last thing...</p>
+        
 
-    <h1>Make a wish.</h1>
-
-    <p class="subtitle">
-      Your candles are waiting.
-    </p>
-
-    <div class="cake-area">
-
-      <!-- CANDLES -->
-      <div class="candles">
-
-        <div class="candle">
-          <div class="flame"></div>
-          <div class="candle-stick"></div>
-        </div>
-
-        <div class="candle">
-          <div class="flame"></div>
-          <div class="candle-stick"></div>
-        </div>
-
-        <div class="candle">
-          <div class="flame"></div>
-          <div class="candle-stick"></div>
-        </div>
-
-      </div>
-
-
-      <!-- CAKE -->
-      <div class="cake">
-
-        <div class="cake-top">
-          <div class="cream cream-1"></div>
-          <div class="cream cream-2"></div>
-          <div class="cream cream-3"></div>
-        </div>
-
-        <div class="cake-middle">
-          <div class="cake-drip drip-1"></div>
-          <div class="cake-drip drip-2"></div>
-          <div class="cake-drip drip-3"></div>
-          <div class="cake-drip drip-4"></div>
-        </div>
-
-        <div class="cake-bottom"></div>
-
-        <div class="plate"></div>
-
-      </div>
-
-    </div>
-
-
-    <!-- COUNTDOWN -->
-    <p id="countdown" class="countdown"></p>
-
-
-    <!-- BLOW OUT BUTTON -->
-      #blowButton {
-  display: inline-block !important;
-  margin: 15px auto 0;
-}
-
-#cakeNext {
-  display: none !important;
-  margin: 12px auto 0;
-}
-
-#cakeNext.show {
-  display: inline-block !important;
-}
-    <button id="blowButton" onclick="blowCandles()">
-      Blow Out the Candles
-    </button>
-
-
-    <!-- NEXT BUTTON -->
-    <button
-      id="cakeNext"
-      class="next-button"
-      onclick="nextPage()"
-      style="display:none;"
-    >
-      Next →
-    </button>
-
-  </div>
-
-</section>
-
-
-<style>
-    <script>
-function blowCandles() {
-
-  document.querySelectorAll("#page5 .flame").forEach(function(flame) {
-    flame.classList.add("off");
-  });
-
-  document.getElementById("countdown").innerText = "Wish made.";
-
-  document.getElementById("blowButton").style.display = "none";
-
-  document.getElementById("cakeNext").classList.add("show");
-}
-</script>
-
-/* =========================
-   CAKE PAGE
-========================= */
-
-.cake-page {
-  text-align: center;
-}
-
-
-/* =========================
-   CAKE AREA
-========================= */
-
-.cake-area {
-  position: relative;
-  width: 330px;
-  height: 280px;
-  margin: 35px auto 10px;
-}
-
-
-/* =========================
-   CANDLES
-========================= */
-
-.candles {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 230px;
-  height: 95px;
-
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  gap: 18px;
-
-  z-index: 5;
-}
-
-.candle {
-  position: relative;
-  width: 12px;
-  height: 70px;
-}
-
-.candle-stick {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-
-  width: 12px;
-  height: 55px;
-
-  background: linear-gradient(
-    to right,
-    #e8c8ff,
-    #b77cff,
-    #e8c8ff
-  );
-
-  border-radius: 4px;
-}
-
-
-/* FLAMES */
-
-.flame {
-  position: absolute;
-  top: -2px;
-  left: 50%;
-
-  width: 14px;
-  height: 20px;
-
-  transform: translateX(-50%);
-
-  background: #ffd45c;
-  border-radius: 50% 50% 50% 50%;
-
-  box-shadow:
-    0 0 8px #ffd45c,
-    0 0 18px #ff9d4d;
-
-  animation: flicker 0.7s infinite alternate;
-}
-
-@keyframes flicker {
-  from {
-    transform: translateX(-50%) scale(1);
-  }
-
-  to {
-    transform: translateX(-50%) scale(0.82);
-  }
-}
-
-
-/* =========================
-   CAKE
-========================= */
-
-.cake {
-  position: absolute;
-  bottom: 25px;
-  left: 50%;
-
-  transform: translateX(-50%);
-
+  
   width: 270px;
-  height: 160px;
-}
-
-
-/* TOP */
-
-.cake-top {
-  position: absolute;
-  top: 0;
-  left: 10px;
-
-  width: 250px;
-  height: 55px;
-
-  background: linear-gradient(
-    135deg,
-    #f7d6ff,
-    #d9a7ff
-  );
-
-  border-radius: 50%;
-
-  z-index: 3;
-
-  box-shadow:
-    inset 0 -8px 0 rgba(150, 80, 190, 0.15);
-}
-
-
-/* CREAM DOTS */
+  
 
 .cream {
   position: absolute;
@@ -1459,60 +1210,1093 @@ function blowCandles() {
   font-size: 18px;
 
   color: #d8c4ff;
+
+
+
+<!-- =========================
+     PAGE 5 : MAKE A WISH
+========================= -->
+
+<section class="screen" id="page5">
+
+  <div class="content wish-page">
+
+    <div class="wish-character">
+      <div class="wish-face">
+        <span class="eye left-eye"></span>
+        <span class="eye right-eye"></span>
+        <span class="mouth"></span>
+      </div>
+
+      <div class="wish-body"></div>
+
+      <div class="wish-star star-one">✦</div>
+      <div class="wish-star star-two">✦</div>
+      <div class="wish-star star-three">✦</div>
+    </div>
+
+    <div class="wish-letter">
+
+      <p class="small-title">a tiny instruction</p>
+
+      <h1>Close your eyes.</h1>
+
+      <p>
+        Make a wish.
+      </p>
+
+      <p class="wish-soft">
+        Take a little moment.<br>
+        This one's just for you.
+      </p>
+
+    </div>
+
+    <button type="button" onclick="goToPage(6)">
+      Next →
+    </button>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     PAGE 6 : BIRTHDAY CAKE
+========================= -->
+
+<section class="screen" id="page6">
+
+  <div class="content cake-page-new">
+
+    <p class="small-title">okay... cake time</p>
+
+    <h1>Make a wish.</h1>
+
+    <p class="subtitle">
+      Your candles are waiting.
+    </p>
+
+
+    <!-- CAKE AREA -->
+
+    <div class="cake-stage">
+
+      <!-- CANDLES -->
+
+      <div class="three-candles">
+
+        <div class="real-candle candle-left">
+          <div class="real-flame">
+            <div class="flame-inner"></div>
+          </div>
+          <div class="candle-wick"></div>
+          <div class="candle-body"></div>
+        </div>
+
+        <div class="real-candle candle-middle">
+          <div class="real-flame">
+            <div class="flame-inner"></div>
+          </div>
+          <div class="candle-wick"></div>
+          <div class="candle-body"></div>
+        </div>
+
+        <div class="real-candle candle-right">
+          <div class="real-flame">
+            <div class="flame-inner"></div>
+          </div>
+          <div class="candle-wick"></div>
+          <div class="candle-body"></div>
+        </div>
+
+      </div>
+
+
+      <!-- CAKE -->
+
+      <div class="pretty-cake">
+
+        <div class="cake-top-new">
+
+          <span class="cake-decoration dot-a"></span>
+          <span class="cake-decoration dot-b"></span>
+          <span class="cake-decoration dot-c"></span>
+          <span class="cake-decoration dot-d"></span>
+
+        </div>
+
+        <div class="cake-cream-drip">
+
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+
+        </div>
+
+        <div class="cake-body-new">
+
+          <div class="cake-stripe"></div>
+
+          <div class="cake-sprinkle s1"></div>
+          <div class="cake-sprinkle s2"></div>
+          <div class="cake-sprinkle s3"></div>
+          <div class="cake-sprinkle s4"></div>
+          <div class="cake-sprinkle s5"></div>
+          <div class="cake-sprinkle s6"></div>
+
+        </div>
+
+        <div class="cake-plate-new"></div>
+
+      </div>
+
+    </div>
+
+
+    <!-- COUNTDOWN -->
+
+    <div id="cakeCountdown" class="cake-countdown"></div>
+
+
+    <!-- BLOW BUTTON -->
+
+    <button
+      type="button"
+      id="blowCandlesButton"
+      onclick="startBlowing()">
+      Blow Out the Candles
+    </button>
+
+
+    <!-- SLICE -->
+
+    <div id="cakeSlice" class="cake-slice-wrapper">
+
+      <div class="slice-plate"></div>
+
+      <div class="cake-slice">
+
+        <div class="slice-cream"></div>
+        <div class="slice-layer layer-one"></div>
+        <div class="slice-layer layer-two"></div>
+        <div class="slice-layer layer-three"></div>
+        <div class="slice-frosting"></div>
+
+      </div>
+
+    </div>
+
+
+    <!-- NEXT -->
+
+    <button
+      type="button"
+      id="cakeNextButton"
+      class="cake-next-button"
+      onclick="goToPage(7)">
+      Next →
+    </button>
+
+
+    <!-- CONFETTI -->
+
+    <div id="confettiContainer"></div>
+
+  </div>
+
+</section>
+
+
+
+<style>
+
+/* =====================================================
+   PAGE 5 — WISH
+===================================================== */
+
+.wish-page {
+  text-align: center;
+  position: relative;
 }
 
 
-/* =========================
-   BUTTONS
-========================= */
+/* LITTLE CHARACTER */
 
-#blowButton {
+.wish-character {
+  position: relative;
+  width: 150px;
+  height: 155px;
+  margin: 25px auto 25px;
+}
+
+.wish-face {
+  position: absolute;
+  width: 105px;
+  height: 90px;
+  left: 22px;
+  top: 15px;
+
+  background: #f6c7df;
+  border-radius: 48% 48% 45% 45%;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,.25);
+}
+
+.wish-body {
+  position: absolute;
+  width: 90px;
+  height: 55px;
+  left: 30px;
+  bottom: 0;
+
+  background: #b88de8;
+  border-radius: 45px 45px 20px 20px;
+}
+
+.eye {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  top: 40px;
+
+  background: #25203b;
+  border-radius: 50%;
+}
+
+.left-eye {
+  left: 31px;
+}
+
+.right-eye {
+  right: 31px;
+}
+
+.mouth {
+  position: absolute;
+  width: 20px;
+  height: 10px;
+  left: 42px;
+  top: 57px;
+
+  border-bottom: 2px solid #25203b;
+  border-radius: 0 0 20px 20px;
+}
+
+.wish-star {
+  position: absolute;
+  color: #f4d76c;
+  font-size: 22px;
+
+  animation: starFloat 2s ease-in-out infinite;
+}
+
+.star-one {
+  top: 0;
+  left: 0;
+}
+
+.star-two {
+  top: 45px;
+  right: 0;
+  animation-delay: .5s;
+}
+
+.star-three {
+  bottom: 10px;
+  left: 5px;
+  animation-delay: 1s;
+}
+
+@keyframes starFloat {
+  50% {
+    transform: translateY(-7px) rotate(10deg);
+    opacity: .65;
+  }
+}
+
+
+/* LETTER */
+
+.wish-letter {
+  margin: 10px auto 28px;
+  max-width: 430px;
+  padding: 28px 25px;
+
+  background: rgba(255,255,255,.07);
+
+  border: 1px solid rgba(255,255,255,.12);
+
+  border-radius: 20px;
+
+  box-shadow: 0 15px 35px rgba(0,0,0,.18);
+}
+
+.wish-letter h1 {
+  margin: 10px 0;
+}
+
+.wish-letter p {
+  line-height: 1.7;
+}
+
+.wish-soft {
+  opacity: .72;
+  font-size: 14px;
+}
+
+
+
+/* =====================================================
+   PAGE 6 — CAKE
+===================================================== */
+
+.cake-page-new {
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* CAKE STAGE */
+
+.cake-stage {
+  position: relative;
+
+  width: 350px;
+  height: 320px;
+
+  margin: 15px auto 0;
+}
+
+
+/* =====================================================
+   CANDLES
+===================================================== */
+
+.three-candles {
+  position: absolute;
+
+  width: 190px;
+  height: 115px;
+
+  left: 80px;
+  top: 20px;
+
+  z-index: 10;
+}
+
+
+/* EACH CANDLE */
+
+.real-candle {
+  position: absolute;
+
+  width: 24px;
+  height: 90px;
+
+  bottom: 0;
+}
+
+
+/* POSITIONS */
+
+.candle-left {
+  left: 20px;
+}
+
+.candle-middle {
+  left: 83px;
+  height: 100px;
+}
+
+.candle-right {
+  right: 20px;
+}
+
+
+/* CANDLE BODY */
+
+.candle-body {
+  position: absolute;
+
+  bottom: 0;
+  left: 4px;
+
+  width: 16px;
+  height: 70px;
+
+  border-radius: 5px 5px 3px 3px;
+
+  background:
+    repeating-linear-gradient(
+      135deg,
+      #ffb4d9 0px,
+      #ffb4d9 5px,
+      #f28abd 5px,
+      #f28abd 9px
+    );
+
+  box-shadow:
+    inset 3px 0 rgba(255,255,255,.35),
+    2px 3px 5px rgba(0,0,0,.25);
+}
+
+
+/* WICK */
+
+.candle-wick {
+  position: absolute;
+
+  width: 2px;
+  height: 8px;
+
+  left: 11px;
+  top: 10px;
+
+  background: #29202a;
+
+  z-index: 4;
+}
+
+
+/* REALISTIC FLAME */
+
+.real-flame {
+  position: absolute;
+
+  width: 22px;
+  height: 34px;
+
+  left: 2px;
+  top: -18px;
+
+  background:
+    radial-gradient(
+      ellipse at 50% 75%,
+      #fff7b2 0%,
+      #ffd447 30%,
+      #ff9b32 58%,
+      #f05b32 78%,
+      transparent 80%
+    );
+
+  border-radius: 55% 45% 55% 45%;
+
+  transform-origin: 50% 90%;
+
+  filter: drop-shadow(0 0 5px #ffbd4a)
+          drop-shadow(0 0 12px #ff8738);
+
+  animation:
+    realFlicker .18s infinite alternate;
+}
+
+
+/* INNER FLAME */
+
+.flame-inner {
+  position: absolute;
+
+  width: 9px;
+  height: 18px;
+
+  left: 7px;
+  top: 12px;
+
+  background: #fffbd2;
+
+  border-radius: 50% 50% 45% 45%;
+}
+
+@keyframes realFlicker {
+
+  0% {
+    transform: rotate(-3deg) scaleY(1);
+  }
+
+  50% {
+    transform: rotate(3deg) scaleY(.94);
+  }
+
+  100% {
+    transform: rotate(-2deg) scaleY(1.08);
+  }
+
+}
+
+
+/* =====================================================
+   CAKE BODY
+===================================================== */
+
+.pretty-cake {
+  position: absolute;
+
+  width: 280px;
+  height: 185px;
+
+  left: 35px;
+  bottom: 22px;
+}
+
+
+/* TOP OF CAKE */
+
+.cake-top-new {
+  position: absolute;
+
+  width: 250px;
+  height: 58px;
+
+  left: 15px;
+  top: 0;
+
+  background:
+    radial-gradient(
+      ellipse at center,
+      #ffd9ef,
+      #f3a8d0
+    );
+
+  border-radius: 50%;
+
+  z-index: 3;
+
+  box-shadow:
+    inset 0 -6px rgba(190,90,150,.18);
+}
+
+
+/* LITTLE DECORATIONS */
+
+.cake-decoration {
+  position: absolute;
+
+  width: 10px;
+  height: 10px;
+
+  background: #fff4a8;
+  border-radius: 50%;
+}
+
+.dot-a {
+  left: 48px;
+  top: 20px;
+}
+
+.dot-b {
+  left: 105px;
+  top: 12px;
+}
+
+.dot-c {
+  right: 75px;
+  top: 23px;
+}
+
+.dot-d {
+  right: 35px;
+  top: 16px;
+}
+
+
+/* CREAM DRIPS */
+
+.cake-cream-drip {
+  position: absolute;
+
+  width: 250px;
+  height: 70px;
+
+  left: 15px;
+  top: 28px;
+
+  background: #fff0fa;
+
+  border-radius: 8px;
+
+  z-index: 2;
+}
+
+.cake-cream-drip span {
+  position: absolute;
+
+  top: 35px;
+
+  width: 25px;
+  height: 25px;
+
+  background: #fff0fa;
+
+  border-radius: 0 0 14px 14px;
+}
+
+.cake-cream-drip span:nth-child(1) {
+  left: 20px;
+}
+
+.cake-cream-drip span:nth-child(2) {
+  left: 70px;
+  height: 35px;
+}
+
+.cake-cream-drip span:nth-child(3) {
+  left: 120px;
+  height: 20px;
+}
+
+.cake-cream-drip span:nth-child(4) {
+  left: 170px;
+  height: 32px;
+}
+
+.cake-cream-drip span:nth-child(5) {
+  right: 15px;
+}
+
+
+/* CAKE BODY */
+
+.cake-body-new {
+  position: absolute;
+
+  width: 280px;
+  height: 110px;
+
+  bottom: 0;
+
+  background:
+    linear-gradient(
+      to bottom,
+      #d982ba,
+      #b45a9b
+    );
+
+  border-radius: 10px 10px 20px 20px;
+
+  box-shadow:
+    0 12px 20px rgba(0,0,0,.25);
+}
+
+
+/* STRIPE */
+
+.cake-stripe {
+  position: absolute;
+
+  width: 235px;
+  height: 5px;
+
+  left: 22px;
+  top: 43px;
+
+  background: rgba(255,255,255,.3);
+
+  border-radius: 10px;
+}
+
+
+/* SPRINKLES */
+
+.cake-sprinkle {
+  position: absolute;
+
+  width: 13px;
+  height: 4px;
+
+  border-radius: 5px;
+
+  background: #ffe27d;
+}
+
+.s1 { left: 35px; top: 65px; transform: rotate(20deg); }
+.s2 { left: 75px; top: 78px; transform: rotate(-20deg); }
+.s3 { left: 115px; top: 64px; transform: rotate(15deg); }
+.s4 { left: 155px; top: 82px; transform: rotate(-15deg); }
+.s5 { left: 200px; top: 65px; transform: rotate(20deg); }
+.s6 { left: 230px; top: 80px; transform: rotate(-20deg); }
+
+
+/* PLATE */
+
+.cake-plate-new {
+  position: absolute;
+
+  width: 315px;
+  height: 25px;
+
+  left: -18px;
+  bottom: -12px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      #f0f1ff,
+      #c8cbed
+    );
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 8px 12px rgba(0,0,0,.3);
+}
+
+
+/* =====================================================
+   COUNTDOWN
+===================================================== */
+
+.cake-countdown {
+  height: 35px;
+
+  margin-top: -2px;
+
+  font-size: 28px;
+  font-weight: bold;
+
+  color: #f8d98b;
+
+  text-shadow: 0 0 12px rgba(255,210,100,.4);
+}
+
+
+/* =====================================================
+   SLICE
+===================================================== */
+
+.cake-slice-wrapper {
+  position: relative;
+
+  width: 190px;
+  height: 110px;
+
+  margin: 5px auto 5px;
+
+  opacity: 0;
+
+  transform: translateY(15px) scale(.85);
+
+  pointer-events: none;
+
+  transition:
+    opacity .6s ease,
+    transform .6s ease;
+}
+
+.cake-slice-wrapper.show {
+  opacity: 1;
+
+  transform: translateY(0) scale(1);
+
+  pointer-events: auto;
+}
+
+
+/* SLICE PLATE */
+
+.slice-plate {
+  position: absolute;
+
+  width: 170px;
+  height: 18px;
+
+  bottom: 3px;
+  left: 10px;
+
+  background: #e2e4fa;
+
+  border-radius: 50%;
+}
+
+
+/* SLICE */
+
+.cake-slice {
+  position: absolute;
+
+  width: 110px;
+  height: 65px;
+
+  left: 40px;
+  bottom: 15px;
+
+  transform: skewY(-8deg);
+
+  background: #c56ca5;
+
+  border-radius: 5px;
+
+  box-shadow: 4px 5px 10px rgba(0,0,0,.25);
+}
+
+
+/* SLICE LAYERS */
+
+.slice-layer {
+  position: absolute;
+
+  width: 100%;
+  height: 13px;
+
+  left: 0;
+}
+
+.layer-one {
+  top: 10px;
+  background: #f8d5a8;
+}
+
+.layer-two {
+  top: 28px;
+  background: #f2b3d5;
+}
+
+.layer-three {
+  top: 45px;
+  background: #f8d5a8;
+}
+
+
+/* SLICE FROSTING */
+
+.slice-frosting {
+  position: absolute;
+
+  width: 112px;
+  height: 17px;
+
+  top: -7px;
+  left: -2px;
+
+  background: #fff0fa;
+
+  border-radius: 50%;
+}
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+#blowCandlesButton {
+  display: inline-block !important;
+
   margin-top: 5px;
 }
 
-#cakeNext {
-  margin-top: 12px;
+.cake-next-button {
+  display: none !important;
+
+  margin-top: 5px;
+}
+
+.cake-next-button.show {
+  display: inline-block !important;
 }
 
 
-/* =========================
-   BLOWN OUT FLAMES
-========================= */
+/* =====================================================
+   CONFETTI
+===================================================== */
 
-.flame.off {
-  display: none;
+#confettiContainer {
+  position: fixed;
+
+  pointer-events: none;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+
+  z-index: 100;
+}
+
+.confetti-piece {
+  position: absolute;
+
+  top: -20px;
+
+  width: 8px;
+  height: 14px;
+
+  border-radius: 2px;
+
+  animation: confettiFall 2.5s linear forwards;
+}
+
+@keyframes confettiFall {
+
+  0% {
+    transform:
+      translateY(-20px)
+      rotate(0deg);
+  }
+
+  100% {
+    transform:
+      translateY(110vh)
+      rotate(720deg);
+  }
+
 }
 
 </style>
 
 
+
 <script>
 
-/* =========================
-   CAKE FUNCTION
-========================= */
+/* =====================================================
+   PAGE NAVIGATION
+===================================================== */
 
-function blowCandles() {
+function goToPage(number) {
 
-  const flames = document.querySelectorAll(".flame");
-
-  flames.forEach(function(flame) {
-    flame.classList.add("off");
+  document.querySelectorAll(".screen").forEach(function(page) {
+    page.classList.remove("active");
   });
 
-  document.getElementById("countdown").innerText =
-    "Wish made. ✦";
+  const target = document.getElementById("page" + number);
 
-  document.getElementById("blowButton").style.display =
-    "none";
+  if (target) {
+    target.classList.add("active");
+  }
 
-  document.getElementById("cakeNext").style.display =
-    "inline-block";
+  window.scrollTo(0, 0);
 }
 
-</script>
 
-            
+
+/* =====================================================
+   BLOW OUT THE CANDLES
+===================================================== */
+
+function startBlowing() {
+
+  const button = document.getElementById("blowCandlesButton");
+  const countdown = document.getElementById("cakeCountdown");
+
+  button.disabled = true;
+
+  let number = 3;
+
+  countdown.innerText = number;
+
+  const timer = setInterval(function() {
+
+    number--;
+
+    if (number > 0) {
+
+      countdown.innerText = number;
+
+    } else {
+
+      clearInterval(timer);
+
+      countdown.innerText = "";
+
+      /* TURN OFF ALL THREE FLAMES */
+
+      document
+        .querySelectorAll("#page6 .real-flame")
+        .forEach(function(flame) {
+
+          flame.style.animation = "none";
+          flame.style.opacity = "0";
+          flame.style.transform = "scale(.2) translateY(10px)";
+          flame.style.transition =
+            "opacity .35s ease, transform .35s ease";
+
+        });
+
+
+      /* BUTTON DISAPPEARS ONLY NOW */
+
+      button.style.display = "none";
+
+
+      /* CONFETTI */
+
+      createConfetti();
+
+
+      /* SHOW CAKE SLICE */
+
+      setTimeout(function() {
+
+        document
+          .getElementById("cakeSlice")
+          .classList.add("show");
+
+        document
+          .getElementById("cakeNextButton")
+          .classList.add("show");
+
+      }, 500);
+
+    }
+
+  }, 900);
+
+}
+
+
+
+/* =====================================================
+   CONFETTI
+===================================================== */
+
+function createConfetti() {
+
+  const container =
+    document.getElementById("confettiContainer");
+
+  container.innerHTML = "";
+
+  for (let i = 0; i < 70; i++) {
+
+    const piece =
+      document.createElement("div");
+
+    piece.className = "confetti-piece";
+
+    piece.style.left =
+      Math.random() * 100 + "%";
+
+    piece.style.animationDelay =
+      Math.random() * .8 + "s";
+
+    piece.style.transform =
+      "rotate(" + Math.random() * 360 + "deg)";
+
+    const colours = [
+      "#ff6fae",
+      "#ffd45c",
+      "#7ed6ff",
+      "#b88cff",
+      "#7ee6b1",
+      "#ff9f68"
+    ];
+
+    piece.style.background =
+      colours[Math.floor(Math.random() * colours.length)];
+
+    container.appendChild(piece);
+
+  }
+
+}
+
+    </script>
 
 <!-- PAGE 6 -->
 
